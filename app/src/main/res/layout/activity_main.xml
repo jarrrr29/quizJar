@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="16dp"
+        android:text="Skor: 0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_score"
+        android:text="Pertanyaan akan muncul di sini?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_answer_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_question"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btn_option_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_answer_status"
+        android:text="Opsi A"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/btn_option_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_option_a"
+        android:text="Opsi B"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/btn_option_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_option_b"
+        android:text="Opsi C"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/btn_option_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_option_c"
+        android:text="Opsi D"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:onClick="checkAnswer"/>
+
+    <Button
+        android:id="@+id/btn_restart_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mulai Kuis Lagi"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:onClick="restartQuiz" />
+
+</RelativeLayout>
